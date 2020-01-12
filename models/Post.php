@@ -19,7 +19,7 @@ class Post {
 
   //Get posts
   public function read(){
-    $qury = 'SELECT
+    $query = 'SELECT
     c.name as category_name,
     p.id,
     p.category_id,
@@ -33,7 +33,8 @@ class Post {
     categories c ON p.category_id = c.id
   ORDER BY
     p.created_at DESC';
-
+    echo "query is...";
+// echo $query;die();
     //PDO stuff
     //Prepare statement
     $stmt = $this->conn->prepare($query);
