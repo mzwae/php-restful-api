@@ -33,7 +33,7 @@ class Post {
     categories c ON p.category_id = c.id
   ORDER BY
     p.created_at DESC';
-    echo "query is...";
+    // echo "query is...";
 // echo $query;die();
     //PDO stuff
     //Prepare statement
