@@ -21,7 +21,7 @@ public function __construct($db){
 public function read(){
   // Create query
   $query = 'SELECT
-    id, name
+    id, name, created_at
   FROM
     ' . $this->table . '
   ORDER BY created_at DESC';
