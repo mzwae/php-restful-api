@@ -6,11 +6,11 @@
   include_once '../../models/Category.php';
 
   // Intantiate DB and connect to DB
-  $category = new Category();
+  $database = new Database();
   $db = $database->connect();
 
   // Instantiate category object
-  $post = new Category($db);
+  $category = new Category($db);
 
 
   // Category read query
@@ -25,7 +25,7 @@
     $cat_arr['data'] = array();
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       extract($row);
-      $post_item = array(
+      $cat_item = array(
         'id' => $id,
         'name' => $name
       );
