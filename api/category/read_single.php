@@ -13,7 +13,7 @@
   $category = new Category($db);
 
   // Get ID from URL
-  $category->id = isset($_GET['id']) ? $_GET['id'] : die();
+  $category->id = isset($_GET['id']) ? $_GET['id'] : die("Please specify the id first!");
 
   // Get post
   $category->read_single();
@@ -26,4 +26,4 @@
   );
 
   // Create JSON
-  print_r(json_encode($post_arr));
+  print_r(json_encode($cat_arr));
