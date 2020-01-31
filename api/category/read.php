@@ -27,7 +27,8 @@
       extract($row);
       $cat_item = array(
         'id' => $id,
-        'name' => $name
+        'name' => $name,
+        'created_at' => $created_at
       );
 
       array_push($cat_arr['data'], $cat_item);
