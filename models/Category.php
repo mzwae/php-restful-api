@@ -22,11 +22,11 @@ class Category
     public function read()
     {
         // Create query
-        $query = 'SELECT
-    id, name, created_at
-  FROM
-    ' . $this->table . '
-  ORDER BY created_at DESC';
+                    $query = 'SELECT
+                id, name, created_at
+              FROM
+                ' . $this->table . '
+              ORDER BY created_at DESC';
 
         // Prepare statement
         $stmt = $this->conn->prepare($query);
@@ -41,12 +41,12 @@ class Category
     public function read_single()
     {
         $query = 'SELECT
-  id, name, created_at
-FROM
-  ' . $this->table . ' p
-WHERE
-  p.id = ?
-LIMIT 0,1';
+            id, name, created_at
+          FROM
+            ' . $this->table . ' p
+          WHERE
+            p.id = ?
+          LIMIT 0,1';
 
         // Prepare statement
         $stmt = $this->conn->prepare($query);
